@@ -1,3 +1,4 @@
+```
 ## Lab – Terraform Resource Blocks
 
 ### Objective
@@ -9,10 +10,11 @@ Learn how Terraform uses **resource blocks** to define, create, and manage infra
 
 Terraform resource blocks follow this general format:
 
-```hcl
+
 resource "<PROVIDER_RESOURCE_TYPE>" "<LOCAL_NAME>" {
   <argument> = <value>
 }
+```
 Key points:
 
 resource declares infrastructure Terraform will manage
@@ -91,9 +93,9 @@ This reinforced Terraform’s provider-based architecture.
 Task 5 – Using Resource References & Forced Replacement
 Updated the S3 bucket name to include a randomly generated ID:
 
-hcl
-Copy code
+```
 bucket = "my-new-tf-test-bucket-${random_id.randomness.hex}"
+```
 Key takeaways:
 
 Terraform allows dynamic values via interpolation
